@@ -1,21 +1,21 @@
 import typescript from "rollup-plugin-typescript2";
 import pkg from "./package.json";
 import { terser } from "rollup-plugin-terser";
-import gzipPlugin from 'rollup-plugin-gzip';
+import gzipPlugin from "rollup-plugin-gzip";
 
 const extensions = [".js", ".jsx", ".ts", ".tsx"];
 const input = "src/index.ts";
 const external = [
-    ...Object.keys(pkg.dependencies || {}),
-    ...Object.keys(pkg.peerDependencies || {}),
-  ];
+  ...Object.keys(pkg.dependencies || {}),
+  ...Object.keys(pkg.peerDependencies || {}),
+];
 
 const plugins = [
   typescript({
     typescript: require("typescript"),
   }),
   terser(),
-  gzipPlugin()
+  gzipPlugin(),
 ];
 
 export default [

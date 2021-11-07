@@ -15,7 +15,7 @@ export const useScroll = (
     function handleScroll() {
       const { isScrolling } = carouselState;
       if (!isScrolling) {
-        if(animationFrameTimeout) cancelAnimationFrame(animationFrameTimeout);
+        if (animationFrameTimeout) cancelAnimationFrame(animationFrameTimeout);
         animationFrameTimeout = requestAnimationFrame(() => {
           setCarouselState((prevState) => {
             return {
@@ -33,7 +33,7 @@ export const useScroll = (
         });
       }
     }
-    const container  = carouselContainerRef.current;
+    const container = carouselContainerRef.current;
     container?.addEventListener("scroll", handleScroll);
     return () => {
       cancelAnimationFrame(animationFrameTimeout);

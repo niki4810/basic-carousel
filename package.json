@@ -9,6 +9,7 @@
     "copy-css": "copyfiles -u 1 styles/**/*.css dist/",
     "build": "npm run clean && npx rollup -c && npm run copy-css",
     "test": "jest --coverage",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(ts|tsx)\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },

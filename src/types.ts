@@ -19,12 +19,12 @@ export type BasicCarouselProps = {
     or resizing of the window. This is provided as a handle to identify which tiles are fully visible to users so that the consumers
     can take further actions as per the application needs.
   */
- onSlideChange?: (tileIndexes: number[]) => void;
+  onSlideChange?: (tileIndexes: number[]) => void;
 };
 
 export type BasicCarouselState = {
-    currentSlideIndex: number;
-    totalNoOfSlides: number;
-    scrollPoints: number[];
-    isScrolling: boolean;
-}
+  currentSlideIndex: number;
+  totalNoOfSlides: number;
+  scrollPoints: number[];
+  isScrolling: boolean;
+};

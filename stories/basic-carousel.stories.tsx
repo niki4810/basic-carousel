@@ -113,7 +113,8 @@ WithoutPaginationDots.args = {
 };
 
 export const PaginationButtonsOnTop = Template.bind({});
-PaginationButtonsOnTop.storyName = "Carousel with pagination buttons on top of the carousel";
+PaginationButtonsOnTop.storyName =
+  "Carousel with pagination buttons on top of the carousel";
 PaginationButtonsOnTop.args = {
-  paginationButtonsPosition: PaginationButtonPositions.onTop
+  paginationButtonsPosition: PaginationButtonPositions.onTop,
 };

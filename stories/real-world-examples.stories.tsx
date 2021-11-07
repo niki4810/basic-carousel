@@ -94,7 +94,7 @@ const MockProductTileAlt: FC<{ product: MockProduct }> = ({ product }) => {
         height="200"
         style={{ marginRight: "10px" }}
       />
-      <div style={{display:"flex", flexDirection: "column"}}>
+      <div style={{ display: "flex", flexDirection: "column" }}>
         <p
           style={{
             fontWeight: "bold",
@@ -131,159 +131,187 @@ const MockProductTileAlt: FC<{ product: MockProduct }> = ({ product }) => {
   );
 };
 
-const FilterPill: FC<FilterPillProps> = ({text}) => {
-    return (
-        <div style={{
-            minWidth: "80px",
-            border: "1px solid #212121",
-            color: "#212121",
-            padding: "5px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-        }}>
-            {text}
-        </div>
-    )
+const FilterPill: FC<FilterPillProps> = ({ text }) => {
+  return (
+    <div
+      style={{
+        minWidth: "80px",
+        border: "1px solid #212121",
+        color: "#212121",
+        padding: "5px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      {text}
+    </div>
+  );
 };
 
-
 export const Default = () => {
-    const products: MockProduct[] = new Array(26).fill({}).map((product, i) => {
-        const title = `${faker.lorem.words()}-${i+1}`;
-        return {
-            ...product,
-            id: faker.datatype.uuid(),
-            title,
-            image: `https:///picsum.photos/200/200?random=${i}`,
-            price: `\$${faker.finance.amount()}`,
-            rating: Math.floor(Math.random() * 5 + 1)
-        }
-    });
+  const products: MockProduct[] = new Array(26).fill({}).map((product, i) => {
+    const title = `${faker.lorem.words()}-${i + 1}`;
+    return {
+      ...product,
+      id: faker.datatype.uuid(),
+      title,
+      image: `https:///picsum.photos/200/200?random=${i}`,
+      price: `\$${faker.finance.amount()}`,
+      rating: Math.floor(Math.random() * 5 + 1),
+    };
+  });
 
-    return (
-        <>
-          <h1>Product Carousel</h1>
-          <BasicCarousel>
-              {products.map((product) => {
-                  return (
-                      <MockProductTile key={product.id} product={product}></MockProductTile>
-                  )
-              })}
-          </BasicCarousel>
-        </>
-    );
-}
+  return (
+    <>
+      <h1>Product Carousel</h1>
+      <BasicCarousel>
+        {products.map((product) => {
+          return (
+            <MockProductTile
+              key={product.id}
+              product={product}
+            ></MockProductTile>
+          );
+        })}
+      </BasicCarousel>
+    </>
+  );
+};
 
 Default.storyName = "Products Carousel";
 
 export const AltProductCarousel = () => {
-    const products: MockProduct[] = new Array(26).fill({}).map((product, i) => {
-        const title = `${faker.lorem.words()}-${i+1}`;
-        return {
-            ...product,
-            id: faker.datatype.uuid(),
-            title,
-            image: `https:///picsum.photos/200/200?random=${i}`,
-            price: `\$${faker.finance.amount()}`,
-            rating: Math.floor(Math.random() * 5 + 1)
-        }
-    });
+  const products: MockProduct[] = new Array(26).fill({}).map((product, i) => {
+    const title = `${faker.lorem.words()}-${i + 1}`;
+    return {
+      ...product,
+      id: faker.datatype.uuid(),
+      title,
+      image: `https:///picsum.photos/200/200?random=${i}`,
+      price: `\$${faker.finance.amount()}`,
+      rating: Math.floor(Math.random() * 5 + 1),
+    };
+  });
 
-    return (
-        <>
-          <h1>Product Carousel Alternate</h1>
-          <BasicCarousel>
-              {products.map((product) => {
-                  return (
-                      <MockProductTileAlt key={product.id} product={product}></MockProductTileAlt>
-                  )
-              })}
-          </BasicCarousel>
-        </>
-    );
-}
+  return (
+    <>
+      <h1>Product Carousel Alternate</h1>
+      <BasicCarousel>
+        {products.map((product) => {
+          return (
+            <MockProductTileAlt
+              key={product.id}
+              product={product}
+            ></MockProductTileAlt>
+          );
+        })}
+      </BasicCarousel>
+    </>
+  );
+};
 
 AltProductCarousel.storyName = "Products Carousel Alternate";
 
 export const FilterPillsCarousel = () => {
-    const filters: FilterPillProps[] = new Array(100).fill({}).map((filter, i) => {
-        return {
-            ...filter,
-            id: faker.random.uuid(),
-            text: `${faker.lorem.word()}-${i+1}`
-        };
+  const filters: FilterPillProps[] = new Array(100)
+    .fill({})
+    .map((filter, i) => {
+      return {
+        ...filter,
+        id: faker.random.uuid(),
+        text: `${faker.lorem.word()}-${i + 1}`,
+      };
     });
 
-    return (
-        <>
-          <h1>Filter Pills Carousel</h1>
-          <BasicCarousel>
-              {filters.map((filter) => {
-                  return (
-                      <FilterPill key={filter.id} text={filter.text} id={filter.id}></FilterPill>
-                  )
-              })}
-          </BasicCarousel>
-        </>
-    );
-}
+  return (
+    <>
+      <h1>Filter Pills Carousel</h1>
+      <BasicCarousel>
+        {filters.map((filter) => {
+          return (
+            <FilterPill
+              key={filter.id}
+              text={filter.text}
+              id={filter.id}
+            ></FilterPill>
+          );
+        })}
+      </BasicCarousel>
+    </>
+  );
+};
 
 FilterPillsCarousel.storyName = "Filter Pills Carousel";
 
-
 type ImageProps = {
-    id: string;
-    imageUrl: string;
-    alt: string;
+  id: string;
+  imageUrl: string;
+  alt: string;
 };
 
 export const ImageGalleryCarousel = () => {
-    const images: ImageProps[] = new Array(27).fill({}).map((image, i) => {
-        return {
-            id: faker.random.uuid(),
-            imageUrl: `https:///picsum.photos/200/300?random=${i}`,
-            alt: `${faker.lorem.word()}-${i+1}`
-        };
-    });
+  const images: ImageProps[] = new Array(27).fill({}).map((image, i) => {
+    return {
+      id: faker.random.uuid(),
+      imageUrl: `https:///picsum.photos/200/300?random=${i}`,
+      alt: `${faker.lorem.word()}-${i + 1}`,
+    };
+  });
 
-    return (
-        <>
-          <h1>Image Gallery Carousel</h1>
-          <BasicCarousel>
-              {images.map((image) => {
-                  return (
-                      <img width="200" height="300" key={image.id} id={image.id} src={image.imageUrl} alt={image.alt} />
-                  );
-              })}
-          </BasicCarousel>
-        </>
-    );
-}
+  return (
+    <>
+      <h1>Image Gallery Carousel</h1>
+      <BasicCarousel>
+        {images.map((image) => {
+          return (
+            <img
+              width="200"
+              height="300"
+              key={image.id}
+              id={image.id}
+              src={image.imageUrl}
+              alt={image.alt}
+            />
+          );
+        })}
+      </BasicCarousel>
+    </>
+  );
+};
 
 ImageGalleryCarousel.storyName = "Image Gallery Carousel";
 
 export const ImageGalleryCarouselAlt = () => {
-    const images: ImageProps[] = new Array(27).fill({}).map((image, i) => {
-        return {
-            id: faker.random.uuid(),
-            imageUrl: `https:///picsum.photos/200/300?random=${i}`,
-            alt: `${faker.lorem.word()}-${i+1}`
-        };
-    });
+  const images: ImageProps[] = new Array(27).fill({}).map((image, i) => {
+    return {
+      id: faker.random.uuid(),
+      imageUrl: `https:///picsum.photos/200/300?random=${i}`,
+      alt: `${faker.lorem.word()}-${i + 1}`,
+    };
+  });
 
-    return (
-        <>
-          <h1>Image Gallery Carousel Alternate</h1>
-          <BasicCarousel paginationButtonsPosition={PaginationButtonPositions.onTop}>
-              {images.map((image) => {
-                  return (
-                      <img width="200" height="300" key={image.id} id={image.id} src={image.imageUrl} alt={image.alt} />
-                  );
-              })}
-          </BasicCarousel>
-        </>
-    );
-}
+  return (
+    <>
+      <h1>Image Gallery Carousel Alternate</h1>
+      <BasicCarousel
+        paginationButtonsPosition={PaginationButtonPositions.onTop}
+      >
+        {images.map((image) => {
+          return (
+            <img
+              width="200"
+              height="300"
+              key={image.id}
+              id={image.id}
+              src={image.imageUrl}
+              alt={image.alt}
+            />
+          );
+        })}
+      </BasicCarousel>
+    </>
+  );
+};
 
 ImageGalleryCarouselAlt.storyName = "Image Gallery Carousel Alternate";

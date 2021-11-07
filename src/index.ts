@@ -1,2 +1,2 @@
 export { BasicCarousel } from "./component/basic-carousel";
-export * from "./types"
+export * from "./types";

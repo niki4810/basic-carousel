@@ -153,7 +153,7 @@ export const BasicCarousel: FC<BasicCarouselProps> = ({
     <div className="basic_carousel__viewport">
       <div className="basic_carousel__viewport--inner">
         <div
-          data-testid="previous-btn-container" 
+          data-testid="previous-btn-container"
           className={`basic_carousel__btn--container ${
             paginationButtonsOnTop || !showPaginationButtons
               ? "basic_carousel__btn--container-no-width"
@@ -195,7 +195,10 @@ export const BasicCarousel: FC<BasicCarouselProps> = ({
         </div>
       </div>
       {displayPaginationDots && (
-        <div data-testid="pagination-dots-container" className="basic_carousel__dots--container">
+        <div
+          data-testid="pagination-dots-container"
+          className="basic_carousel__dots--container"
+        >
           {scrollPoints.map((_: number, i: number) => {
             const paginationDotsClass = `basic_carousel__dots ${
               currentSlideIndex === i ? "basic_carousel__dots--active" : ""
