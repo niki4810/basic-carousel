@@ -50,6 +50,7 @@ export const useCarouselStateCalculator = (
         });
   
         const carouselTile = carouselContainerRef.current.children[0] as HTMLElement;
+        /* istanbul ignore next */
         if(typeof carouselContainerRef.current.scrollTo === "function") {
           carouselContainerRef.current.scrollTo({
             left: carouselTile.offsetLeft ?? 0,
@@ -60,6 +61,7 @@ export const useCarouselStateCalculator = (
   
       /* On resize recalculate carousel slides */
       let timeout: number;
+      /* istanbul ignore next */
       function handleResize() {
         if(timeout) clearTimeout(timeout);
         timeout = setTimeout(() => {

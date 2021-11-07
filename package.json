@@ -54,6 +54,9 @@
       "tsx",
       "js"
     ],
-    "testEnvironment": "jsdom"
+    "testEnvironment": "jsdom",
+    "collectCoverageFrom": [
+      "src/component/**/*.(ts|tsx)"
+    ]
   }
 }
