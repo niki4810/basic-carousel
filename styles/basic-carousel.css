@@ -1,0 +1,109 @@
+:root {
+  --basic-carousel-tile-spacing: 10px;
+  --basic-carousel-pagination-button-width: 35px;
+  --basic-carousel-pagination-button-height: 35px;
+  --basic-carousel-pagination-button-padding: 5px;
+  --basic-carousel-pagination-button-color: #212121;
+  --basic-carousel-pagination-button-background: #ffffff;
+  --basic-carousel-pagination-button-border-color: #212121;
+  --basic-carousel-pagination-dots-background: #d6d7d9;
+  --basic-carousel-pagination-dots-active-background: #212121;
+}
+
+/* View Port */
+.basic_carousel__viewport {
+    position: relative;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.basic_carousel__viewport:before,
+.basic_carousel__viewport:after {
+    box-sizing: inherit;
+}
+
+/* View Port Inner */
+.basic_carousel__viewport--inner {
+    display: flex;
+}
+/* Main Carousel */
+.basic_carousel__container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.basic_carousel__container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Carousel Children */
+.basic_carousel__tile {
+    margin-right: var(--basic-carousel-tile-spacing);
+    display:flex;
+    max-width: 100%;
+}
+
+.basic_carousel__tile:last-child {
+    margin-right: 0;
+}
+
+/* Pagination Buttons */
+.basic_carousel__btn--container {
+    min-width: var(--basic-carousel-pagination-button-width);
+    padding: var(--basic-carousel-pagination-button-padding);
+    display: flex;
+    align-items: center;;
+}
+
+.basic_carousel__btn--container.basic_carousel__btn--container-no-width {
+    min-width: 0;
+    padding: 0;
+}
+
+.basic_carousel__btn {
+    display: none;
+    font-weight: 600;
+    width: var(--basic-carousel-pagination-button-width);
+    height: var(--basic-carousel-pagination-button-height);
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 40px;
+    border: 1px solid var(--basic-carousel-pagination-button-border-color);
+    color: var(--basic-carousel-pagination-button-color);
+    background: var(--basic-carousel-pagination-button-background);
+}
+
+.basic_carousel__btn.basic_carousel__btn--positioned {
+    position: absolute;
+}
+.basic_carousel__btn.basic_carousel__btn--positioned.basic_carousel__btn--prev {
+  left: 10px;
+}
+.basic_carousel__btn.basic_carousel__btn--positioned.basic_carousel__btn--next {
+  right: 10px;
+}
+.basic_carousel__btn.basic_carousel__btn--active {
+    display: block;
+}
+
+/* Pagination dots */
+.basic_carousel__dots--container {
+    padding:10px;
+    display: flex;
+    justify-content: center;
+}
+.basic_carousel__dots {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    margin: 5px;
+    padding: 0;
+    cursor: pointer;
+    border: 0;
+    background: var(--basic-carousel-pagination-dots-background);
+}
+
+.basic_carousel__dots--active {
+    background: var(--basic-carousel-pagination-dots-active-background);
+}
