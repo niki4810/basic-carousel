@@ -1,0 +1,24 @@
+name: Test and Publish
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  runTests:
+    name: Run Tests
+    runs_on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: node
+        uses: actions/setup-node@v2.4.1
+        with:
+          node-version: 14
+      - name: Install packages
+        run: npm ci
+      - name: Execute Jest Tests
