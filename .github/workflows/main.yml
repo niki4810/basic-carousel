@@ -19,6 +19,24 @@ jobs:
         uses: actions/setup-node@v2.4.1
         with:
           node-version: 14
-      - name: Install packages
-        run: npm ci
-      - name: Execute Jest Tests
+      - run: npm ci
+      - run: npm run test
+  
+  publish:
+    name: Publish Package
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' }}
+    needs: [runTests]
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: node
+        uses: actions/setup-node@v2.4.1
+        with:
+          node-version: 14
+      - run: npm ci
+      - run: npm publish --access public
+        working-directory: dist
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+      
