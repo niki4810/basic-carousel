@@ -111,7 +111,7 @@ describe("When the carousel is rendered", () => {
     expect(screen.getByRole("button", { name: ">" })).toHaveClass(
       "basic_carousel__btn--active"
     );
-    expect(screen.getByLabelText("slide 1")).toHaveClass(
+    expect(screen.getByLabelText("slide 100")).toHaveClass(
       "basic_carousel__dots--active"
     );
     expect(slideChangeCb).toHaveBeenCalledWith([1]);
