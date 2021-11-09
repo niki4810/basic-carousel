@@ -1,5 +1,5 @@
 {
-  "name": "basic-carousel",
+  "name": "@niki4810/basic-carousel",
   "version": "0.0.1",
   "description": "A basic carousel in react",
   "main": "dist/index.js",
