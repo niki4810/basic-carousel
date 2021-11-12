@@ -82,9 +82,6 @@
       "src/component/**/*.(ts|tsx)"
     ]
   },
-  "publishConfig": {
-    "access": "restricted"
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
