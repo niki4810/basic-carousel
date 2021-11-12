@@ -3,7 +3,13 @@
   "version": "0.0.0-development",
   "description": "A basic carousel in react",
   "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "module": "dist/index.esm.js",
+  "files": [
+    "dist",
+    "src",
+    "styles/basic-carousel.css"
+  ],
   "scripts": {
     "clean": "rimraf dist/",
     "copy-css": "copyfiles -u 1 styles/**/*.css dist/",
