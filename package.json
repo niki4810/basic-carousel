@@ -12,7 +12,8 @@
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(ts|tsx)\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "semantic-release": "semantic-release --branches main"
+    "semantic-release": "semantic-release --branches main",
+    "commit": "git-cz"
   },
   "keywords": [
     "react",
@@ -42,6 +43,7 @@
     "@types/react": "^17.0.33",
     "babel-loader": "^8.2.3",
     "copyfiles": "^2.4.1",
+    "cz-conventional-changelog": "^3.3.0",
     "faker": "^5.5.3",
     "jest": "^27.3.1",
     "prettier": "^2.4.1",
@@ -52,9 +54,9 @@
     "rollup-plugin-gzip": "^2.5.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
+    "semantic-release": "^18.0.0",
     "ts-jest": "^27.0.7",
-    "typescript": "^4.4.4",
-    "semantic-release": "^18.0.0"
+    "typescript": "^4.4.4"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -76,5 +78,10 @@
   },
   "publishConfig": {
     "access": "restricted"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
