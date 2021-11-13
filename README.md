@@ -1,4 +1,5 @@
 # Basic Carousel
+![example workflow](https://github.com/niki4810/basic-carousel/actions/workflows/main.yml/badge.svg)
 
 A Basic carousel implementation using react, typescript and css.
 
