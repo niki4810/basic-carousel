@@ -7,7 +7,6 @@
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
-    "src",
     "styles/basic-carousel.css"
   ],
   "scripts": {
