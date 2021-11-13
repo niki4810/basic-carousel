@@ -34,7 +34,5 @@ const Parent = () => {
 - Import the styles in your root css file:
 
 ```
-import "./node_modules/@niki4810/basic-carousel/basic-carousel.css"
+@import '@niki4810/basic-carousel/dist/basic-carousel.css';
 ```
-
-> You may need to adjust the path to node_modules based on where your root css file is located
