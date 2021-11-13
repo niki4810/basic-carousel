@@ -6,8 +6,7 @@
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist",
-    "styles/basic-carousel.css"
+    "dist"
   ],
   "scripts": {
     "clean": "rimraf dist/",
