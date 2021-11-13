@@ -3,8 +3,8 @@
   "version": "0.0.0-development",
   "description": "A basic carousel in react",
   "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
   "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
   "files": [
     "dist",
     "src",
@@ -13,7 +13,7 @@
   "scripts": {
     "clean": "rimraf dist/",
     "copy-css": "copyfiles -u 1 styles/**/*.css dist/",
-    "build": "npm run clean && npx rollup -c && npm run copy-css",
+    "build": "npx rollup -c && npm run copy-css",
     "test": "jest --coverage",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(ts|tsx)\"",
     "storybook": "start-storybook -p 6006",
