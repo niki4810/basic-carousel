@@ -138,13 +138,13 @@ export const BasicCarousel: FC<BasicCarouselProps> = ({
   // we don't mutate any attributes of the passed in child html elements.
   const transformedChildren = React.Children.map(children, (child, i) => {
     return (
-      <section
+      <div
         className="basic_carousel__tile"
         data-tile-id={i}
         key={`tile-${i}`}
       >
         {child}
-      </section>
+      </div>
     );
   });
 
