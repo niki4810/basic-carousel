@@ -1,6 +1,5 @@
 # Basic Carousel
-![example workflow](https://github.com/niki4810/basic-carousel/actions/workflows/main.yml/badge.svg) [![npm version](https://badge.fury.io/js/@niki4810%2Fbasic-carousel.svg)](https://www.npmjs.com/package/@niki4810/basic-carousel) <a href="https://bundlephobia.com/result?p=@niki4810/basic-carousel@latest" target="\_parent">
-  <img alt="" src="https://badgen.net/bundlephobia/minzip/@niki4810/basic-carousel@latest" />
+![example workflow](https://github.com/niki4810/basic-carousel/actions/workflows/main.yml/badge.svg) [![npm version](https://img.shields.io/npm/v/@niki4810%2Fbasic-carousel.svg?style=flat)](https://www.npmjs.com/package/@niki4810/basic-carousel) <a href="https://bundlephobia.com/result?p=@niki4810/basic-carousel@latest" target="\_parent"><img alt="" src="https://badgen.net/bundlephobia/minzip/@niki4810/basic-carousel@latest" />
 </a>
 
 A Basic carousel implementation using react, typescript and css.
