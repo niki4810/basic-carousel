@@ -19,7 +19,7 @@ npm i --save @niki4810/basic-carousel
 - Import the component in your code
 
 ```
-import {BasicCarouse} from "@niki4810/basic-carousel"
+import {BasicCarousel} from "@niki4810/basic-carousel"
 ```
 
 - Render the carousel
