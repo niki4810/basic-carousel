@@ -57,12 +57,12 @@ Prop | Description | Default
 showPaginationButtons | Determines if the bottom pagination buttons should be rendered. | true
 paginationButtonsPosition | Determines if left and  right chevron pagination buttons should be rendered outside the carousel or on top of the carousel | PaginationButtonPositions.outside 
 showPaginationDots | Determines if the bottom pagination dots should be rendered.| true
-onSlideChange| A callback function that returns an array of child tile indexes fully visible in the carousel viewport.Dispatched once when the slides are calculated (like the initial mount), everytime when slides are changed due to pagination or resizing of the window. This is provided as a handle to identify which tiles are fully visible to users so that the consumers can take further actions as per the application needs. | `() => {}`
+onSlideChange| A callback function that returns an array of child tile indexes fully visible in the carousel viewport.Dispatched once when the slides are calculated (like the initial mount), every time when slides are changed due to pagination or resizing of the window. This is provided as a handle to identify which tiles are fully visible to users so that the consumers can take further actions as per the application needs. | `() => {}`
 
 
 ## Examples
 
-You have view code examples by running the storybook:
+You can view code examples by running the storybook:
 
 - `npm run storybook`
 - Visit [http://localhost:6006/](http://localhost:6006/)
